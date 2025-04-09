@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { redirect } from "next/navigation";
 
 import About from "./_components/_about/About";
 import Header from "./_components/_header/Header";
@@ -11,13 +11,15 @@ import ProjectsSection from "./_components/ProjectsSection";
 import Footer from "./_components/_footer/Footer";
 
 export default function Home() {
+  redirect("https://www.jcdevweb.com/");
+
   return (
     <main className="absolute flex flex-col items-center justify-center gap-20 overflow-x-hidden overflow-y-clip p-8 md:p-24">
       <Header />
       <Hero />
       <NewServices />
       <About />
-{/*       <section>
+      {/*       <section>
         <h2 className="w-2/3 text-center text-3xl">Mes services</h2>
         <motion.div className="relative flex w-full flex-col flex-wrap gap-6 md:grid md:grid-cols-2 md:grid-rows-2">
           <motion.div
@@ -217,7 +219,8 @@ export default function Home() {
       </section> */}
       <ProjectsSection />
       <Contact />
-      <Footer/>
+      <Footer />
     </main>
   );
 }
+
